@@ -1,0 +1,67 @@
+{
+  "name": "slider-jquery-plugin",
+  "version": "1.0.0",
+  "description": "Slider component like jquery plugin for web projects",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --progress -p --env production",
+    "start": "webpack --env develop",
+    "server-dev": "webpack-dev-server --open --env develop",
+    "server-prod": "webpack-dev-server --open --env production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GregoryGhost/slider-jquery-plugin.git"
+  },
+  "keywords": [
+    "slider",
+    "jquery",
+    "plugin",
+    "typescript",
+    "javascript"
+  ],
+  "author": "Kulakov Gregory",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GregoryGhost/slider-jquery-plugin/issues"
+  },
+  "homepage": "https://github.com/GregoryGhost/slider-jquery-plugin#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "jshint-loader": "^0.8.4",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
+    "style-loader": "^0.21.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "ts-loader": "^3.5.0",
+    "tslint": "^5.11.0",
+    "tslint-loader": "^3.6.0",
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.3.5",
+    "jquery": "^3.3.1",
+    "jquery-ui": "^1.12.1",
+    "jquery-ui-touch-punch": "^0.2.3",
+    "jshint": "^2.9.6",
+    "typescript": "^3.0.1"
+  }
+}

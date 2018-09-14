@@ -36,7 +36,7 @@ class ConstrainedValue
     /**
      * Минимальное значение диапазона.
      */
-    set min(newMin: number)
+    private set min(newMin: number)
     {
         this._min = newMin;
     }
@@ -52,7 +52,7 @@ class ConstrainedValue
     /**
      * Максимальное значение диапазона.
      */
-    set max(newMax: number)
+    private set max(newMax: number)
     {
         this._max = newMax;
     }

@@ -3,6 +3,12 @@ interface ITestCase < T >{
     testData: T
 }
 
+/**
+ * Задает тестовый случай.
+ * @param testName - Название тестового случая.
+ * @param testData - Тестовые данные к тестовому случаю.
+ * @returns Возвращает тестовый случай.
+ */
 function testCase(testName: string,
     testData: T): ITestCase < T >
 {

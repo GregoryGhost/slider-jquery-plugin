@@ -14,4 +14,11 @@ function setData(min: number, value: number,
     }
 }
 
-export {ITestCaseCV, setData};
+function setValue(value: number)
+{
+    return {
+        value: value
+    };
+}
+
+export {ITestCaseCV, setData, setValue};

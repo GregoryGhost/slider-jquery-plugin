@@ -44,10 +44,12 @@ class ConstrainedValue
     set value(newValue: number)
     {
         if (newValue > this.max) {
-            throw new RangeError('blabla');
+            throw new RangeError(`Setting value=${newValue} \
+                above than max value=${this.max}`);
         }
         if (newValue < this.min) {
-            throw new RangeError('blabla');
+            throw new RangeError(`Setting value=${newValue} \
+                below than min value=${this.min}`);
         }
         this._value = newValue;
     }

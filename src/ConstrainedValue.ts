@@ -8,6 +8,12 @@ class ConstrainedValue
         private _value: number,
         private _max: number)
     {
+        if (_min > _max)
+        {
+            throw new RangeError(`Min value = ${_min} \
+                above than max value ${_max}`);
+        }
+        this.value = _value;
     }
 
     get min(): number
@@ -37,6 +43,12 @@ class ConstrainedValue
     
     set value(newValue: number)
     {
+        if (newValue > this.max) {
+            throw new RangeError('blabla');
+        }
+        if (newValue < this.min) {
+            throw new RangeError('blabla');
+        }
         this._value = newValue;
     }
 }

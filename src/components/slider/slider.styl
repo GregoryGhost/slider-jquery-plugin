@@ -1,0 +1,82 @@
+@import "../../global/colors.styl";
+
+.slider
+    flex: 1 1 auto
+    cursor: move
+    --colorFilled: $colorGreenishBlue
+
+    &_orange
+        --colorFilled: $colorOrange
+
+.ui-slider
+    
+    &-handle
+        color: $colorWhite
+        background-color: var(--colorFilled)
+        
+    &-tip
+        color: $colorWhite
+        background-color: var(--colorFilled)
+    
+    &.ui-widget
+        background-color: $colorLightenGray
+        border: none
+        border-radius: 2.5rem
+        height: 0.35rem
+
+        .ui-slider
+
+            &-handle
+                border-radius: 50%
+                border: none
+                cursor: move
+                outline: none
+                top: -0.4em
+                background-color: var(--colorFilled)
+
+            &:focus
+                outline: none
+
+            &-range-min
+                background-color: var(--colorFilled)
+
+            &-tip
+                font-family: Lato, Arial, sans-serif
+                font-size: 0.81rem
+                line-height: 0.9em
+                font-weight: bold
+                width: 2.2rem
+                border-radius: 0.25rem
+                color: $colorWhite
+                top: -2.6em
+                height: auto
+                letter-spacing: 0.05em
+                padding: 0.5em 0
+                border: none
+                background-color: var(--colorFilled)
+
+                &:before
+                    bottom: -0.56rem
+                    border-top-color: var(--colorFilled)
+
+                &:after
+                    bottom: -0.56rem
+                    border-top-color: var(--colorFilled)
+
+            &-pip
+                top: 0.65rem
+
+                &:hover .ui-slider-label
+                    font-weight: bold
+
+                &:last-of-type
+                    margin-left: -1.188rem
+
+            &-line
+                display: none
+
+            &-label
+                font-family: Lato, Arial, sans-serif
+                font-size: 0.69rem
+                font-weight: bold
+                color: $colorLightenGray

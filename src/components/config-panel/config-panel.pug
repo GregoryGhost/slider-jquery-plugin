@@ -1,0 +1,26 @@
+mixin config-panel({} = {})
+    .config-panel.config-js
+        .text-input({
+            label="Max value:",
+            value=maxValue,
+        })
+        .text-input({
+            label="Min value:",
+            value=minValue
+        })
+        .text-input({
+            label="Current value:",
+            value=currentValue
+        })
+        .text-input({
+            label="Step:",
+            value=step
+        })
+        .toogle({
+            label="Vertical/horizontal view:",
+            labelChecked="vertical",
+            labelUnchecked="horizontal"
+        })
+        .toogle({
+            label="Float:"
+        })

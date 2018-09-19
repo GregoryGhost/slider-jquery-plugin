@@ -19,10 +19,10 @@ const PATHS = {
 const POINTS = {
     build: PATHS.build,
     src: PATHS.source,
-    htmlFileName: 'demo-components-page',
-    chunks: ['demo-components-page', 'common'],
+    htmlFileName: 'samples-slider-page',
+    chunks: ['samples-slider-page', 'common'],
     entries: {
-        'demo-components-page': path.join(PATHS.source,
+        'samples-slider-page': path.join(PATHS.source,
             './entry-point.js')
     },
     plugins: [

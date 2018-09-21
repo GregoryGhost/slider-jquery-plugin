@@ -1,0 +1,18 @@
+include ../slider/slider.pug
+include ../config-panel/config-panel.pug
+
+mixin live-customizable-slider({ id = "id-live", idSlider = "id-slider", idConfigPanel = "idConfigPanel" } = {})
+    .live-customizable-slider(
+        id=id,
+        id-slider=idSlider,
+        id-config-panel=idConfigPanel
+    )
+        .live-customizable-slider__item
+            +slider({
+                id=idSlider
+            })
+        .live-customizable-slider__item
+            +config-panel({
+                id=idPanel
+            })
+        

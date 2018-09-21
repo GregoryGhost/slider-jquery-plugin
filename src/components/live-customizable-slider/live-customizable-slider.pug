@@ -4,8 +4,8 @@ include ../config-panel/config-panel.pug
 mixin live-customizable-slider({ id = "id-live", idSlider = "id-slider", idConfigPanel = "idConfigPanel" } = {})
     .live-customizable-slider(
         id=id,
-        id-slider=idSlider,
-        id-config-panel=idConfigPanel
+        data-id-slider=idSlider,
+        data-id-config-panel=idConfigPanel
     )
         .live-customizable-slider__item
             +slider({

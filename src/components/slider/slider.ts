@@ -4,33 +4,37 @@ import 'jquery-ui/themes/base/theme.css';
 import 'jquery-ui/themes/base/slider.css';
 import 'plugins/jquery-ui-slider-pips/jquery-ui-slider-pips.js';
 import 'plugins/jquery-ui-slider-pips/jquery-ui-slider-pips.css';
+import {ComponentsCenter} from '../../ComponentsCenter.ts';
    
-class Slider
+class Slider: IComponent
 {
-    constructor(slider)
+    public readonly id: string;
+    
+    constructor(slider: HTMLDivElement)
     {
-        this.$slider = $(slider);
+        let $slider = $(slider);
+        this.id = $slider.id;
         
-        const s = this.$slider.slider({
-            min: this.$slider.data('min'),
-            max: this.$slider.data('max'),
-            value: this.$slider.data('value'),
-            step: this.$slider.data('step'),
+        const s = $slider.slider({
+            min: $slider.data('min'),
+            max: $slider.data('max'),
+            value: $slider.data('value'),
+            step: $slider.data('step'),
         });
         
-        if (this.$slider.is('[data-fill]'))
+        if ($slider.is('[data-fill]'))
         {
             s.slider({
                 range: 'min',
             });
         }
         
-        if (this.$slider.is('[data-float]'))
+        if ($slider.is('[data-float]'))
         {
             s.slider('float');
         }
         
-        if (this.$slider.is('[data-pips]'))
+        if ($slider.is('[data-pips]'))
         {
             s.slider("pips", {
                 rest: "label"
@@ -45,6 +49,11 @@ export default function render()
 
     if ($components.length > 0)
     {
-        $components.map((index, node) => new Slider(node));
+        $components.map((index, node) =>
+        {
+            let slider = new Slider(node);
+            ComponentsCenter.instance.addComponent(slider);
+            return slider;
+        });
     }
 }

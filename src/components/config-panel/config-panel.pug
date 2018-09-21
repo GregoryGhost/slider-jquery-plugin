@@ -1,5 +1,7 @@
-mixin config-panel({} = {})
-    .config-panel.config-js
+mixin config-panel({ id = "config-panel" } = {})
+    .config-panel.config-js(
+        id=id
+    )
         .text-input({
             label="Max value:",
             value=maxValue,
@@ -19,8 +21,10 @@ mixin config-panel({} = {})
         .toogle({
             label="Vertical/horizontal view:",
             labelChecked="vertical",
-            labelUnchecked="horizontal"
+            labelUnchecked="horizontal",
+            isChecked=isCheckedView
         })
         .toogle({
-            label="Float:"
+            label="Float:",
+            isChecked=isCheckedFloat
         })

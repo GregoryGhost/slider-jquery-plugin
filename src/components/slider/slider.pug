@@ -1,9 +1,11 @@
-mixin slider({ minValue = 0, value = 50, maxValue = 100, hasFloat = true, hasPips = false, isFilled = false, color, step = 1 } = {})
+mixin slider({ id = "slider", minValue = 0, value = 50, maxValue = 100, hasFloat = true, hasPips = false, isFilled = false, color, step = 1 } = {})
     -
         var classColor = color
             ? `slider_${color}`
             : '';
-    .slider.slider-js(class=classColor
+    .slider.slider-js(
+        id=id,
+        class=classColor,
         data-float=hasFloat,
         data-pips=hasPips, data-value=value,
         data-max=maxValue, data-min=minValue,
